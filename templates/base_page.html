@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>{% block pagetitle %}{% endblock %}</title>
+    <title>{% block pagetitle %}Тренажер для изучения немецкого языка{% endblock %}</title>
     <!-- load static -->
     {% load static %}
     <!-- CSS -->
@@ -14,19 +14,51 @@
         <header class="border-bottom">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <div class="fs-2 mb-3">
-                    <img src="{% static 'calculator.svg' %}" alt="Проект про математику" width="32" height="32"/>
-                    <span>Проект про математику</span>
+                    <img src="{% static 'language.svg' %}" alt="Тренажер для изучения немецкого языка" width="32" height="32"/>
+                    <span>Тренажер для изучения немецкого языка</span>
                 </div>
             </a>
         </header>
         <div class="p-5 mb-4 bg-light rounded-3" id="title-box">
             <div class="container-fluid py-5">
-                <h1 class="display-1 fw-bold">{% block page-title %}{% endblock %}</h1>
-                <p class="col-md-8 fs-4">{% block page-lead %}{% endblock %}</p>
+                <h1 class="display-1 fw-bold">{% block page-title %}Добро пожаловать в наш тренажер!{% endblock %}</h1>
+                <p class="col-md-8 fs-4">{% block page-lead %}Изучайте немецкий язык с помощью интерактивных уроков и карточек. Начните свой путь к свободному владению языком уже сегодня!{% endblock %}</p>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'lessons.jpg' %}" class="card-img-top" alt="Уроки">
+                    <div class="card-body">
+                        <h5 class="card-title">Интерактивные уроки</h5>
+                        <p class="card-text">Пройдите наши уроки, чтобы изучить основы немецкого языка и расширить свой словарный запас.</p>
+                        <a href="/lessons" class="btn btn-primary">Начать уроки</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'flashcards.jpg' %}" class="card-img-top" alt="Карточки">
+                    <div class="card-body">
+                        <h5 class="card-title">Карточки для запоминания</h5>
+                        <p class="card-text">Используйте карточки для запоминания новых слов и фраз. Тренируйте память с помощью различных режимов.</p>
+                        <a href="/flashcards" class="btn btn-primary">Перейти к карточкам</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'quizzes.jpg' %}" class="card-img-top" alt="Викторины">
+                    <div class="card-body">
+                        <h5 class="card-title">Викторины</h5>
+                        <p class="card-text">Проверьте свои знания с помощью викторин. Узнайте, что вы уже знаете, и где нужно улучшить!</p>
+                        <a href="/quizzes" class="btn btn-primary">Начать викторину</a>
+                    </div>
+                </div>
             </div>
         </div>
         {% block content %}{% endblock %}
-        <footer class="footer pt-3 mt-4 text-muted border-top">© 2023</footer>
+        <footer class="footer pt-3 mt-4 text-muted border-top">© 2023 Тренажер для изучения немецкого языка</footer>
     </div>
 </main>
 </body>
