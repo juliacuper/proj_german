@@ -1,11 +1,11 @@
 {% extends "base_page.html" %}
 
 {% block page-title %}
-Список терминов
+Список терминов для изучения немецкого языка
 {% endblock %}
 
 {% block page-lead %}
-Все термины извлекаются из БД/файла и динамически вставляются в таблицу.
+Здесь вы можете просмотреть все термины, которые были добавлены для изучения немецкого языка. Каждый термин включает описание и его значение.
 {% endblock %}
 
 {% block content %}
@@ -15,8 +15,8 @@
           <thead>
             <tr>
               <th scope="col" class="py-3">#</th>
-              <th scope="col" class="py-3">Термин</th>
-              <th scope="col" class="py-3">Описание</th>
+              <th scope="col" class="py-3">Термин (на немецком)</th>
+              <th scope="col" class="py-3">Описание (на русском)</th>
             </tr>
           </thead>
           <tbody>
