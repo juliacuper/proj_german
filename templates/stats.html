@@ -1,12 +1,11 @@
 {% extends "base_page.html" %}
 
 {% block page-title %}
-Статистика по терминам
+Статистика по изучению немецкого языка
 {% endblock %}
 
 {% block page-lead %}
-Перед тем, как отрендерить эту страницу, веб-приложение ходит в файл/БД, обновляет статистики, а затем подставляет их в шаблон страницы.
-Всё это можно посмотреть в файле <code>views.py</code>.
+На этой странице вы можете увидеть статистику по терминам, которые вы изучили. Веб-приложение обновляет данные, обращаясь к базе данных, и затем отображает их здесь. Все детали можно найти в файле <code>views.py</code>.
 {% endblock %}
 
 {% block content %}
@@ -17,34 +16,33 @@
     <div class="row text-center">
         <div class="col-md-4">
             <h4>{{ terms_all }}</h4>
-            <p class="text-muted">всего</p>
+            <p class="text-muted">всего изученных терминов</p>
         </div>
         <div class="col-md-4">
             <h4>{{ terms_own }}</h4>
-            <p class="text-muted">изначально бывших в базе</p>
+            <p class="text-muted">терминов изначально в базе данных</p>
         </div>
         <div class="col-md-4">
             <h4>{{ terms_added }}</h4>
-            <p class="text-muted">добавленных через <a href="/add-term">форму добавления термина</a></p>
+            <p class="text-muted">добавленных вами через <a href="/add-term">форму добавления термина</a></p>
         </div>
     </div>
     <div>
-        <h3 class="py-2">Описания</h3>
+        <h3 class="py-2">Описания терминов</h3>
     </div>
     <div class="row text-center">
         <div class="col-md-4">
             <h4>{{ words_avg }}</h4>
-            <p class="text-muted">слов в среднем</p>
+            <p class="text-muted">слов в среднем на термин</p>
         </div>
         <div class="col-sm-4">
             <h4>{{ words_max }}</h4>
-            <p class="text-muted">максимум</p>
+            <p class="text-muted">максимум слов в одном описании</p>
         </div>
         <div class="col-sm-4">
             <h4>{{ words_min }}</h4>
-            <p class="text-muted">минимум</p>
+            <p class="text-muted">минимум слов в одном описании</p>
         </div>
     </div>
 </div>
 {% endblock %}
-
