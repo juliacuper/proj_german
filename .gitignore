@@ -28,8 +28,6 @@ share/python-wheels/
 MANIFEST
 
 # PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
@@ -60,6 +58,7 @@ coverage.xml
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+media/
 
 # Flask stuff:
 instance/
@@ -85,14 +84,10 @@ ipython_config.py
 .python-version
 
 # pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
 #Pipfile.lock
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
+pypackages/
 
 # Celery stuff
 celerybeat-schedule
@@ -130,3 +125,22 @@ dmypy.json
 
 # Mac OS X file manager
 .DS_Store
+
+# IDE and editor specific files (optional)
+.vscode/
+.idea/
+
+# Local configuration files (optional)
+local_settings.py
+
+# Temporary files (optional)
+*.tmp
+*.temp
+
+# Log files (optional)
+*.log
+
+# Coverage reports (optional)
+coverage.xml
+
+# Other files to ignore specific to your project can be added here.
